@@ -1,5 +1,6 @@
 # Practice Application
 + By: Kenyon King
-+ Production URL:
++ Production URL: digitalcrimson.org
 
-# no notes for the instructor
+# Notes for the instructor
++ i am having trouble with subdomains...
