@@ -1,6 +1,6 @@
 # Practice Application
 + By: Kenyon King
-+ Production URL: digitalcrimson.org
++ Production URL: practice.digitalcrimson.org
 
 # Notes for the instructor
-+ i am having trouble with subdomains...
++ i successfully created a subdomain...
