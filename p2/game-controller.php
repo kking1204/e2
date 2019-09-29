@@ -1,6 +1,10 @@
 <?php
 // this is the brains of the rock paper scissors game
-
+// * I define a variable ($throw) that contains 'rocks', 'paper' 'scissors'
+// * I then define two variables, PlayerAMove and PlayerBMove. 
+// * PlayerAMove chooses a string at random from the $throw variable: 'rocks' (0), 'paper' (1) or 'scissors' (2)
+// * PlayerBMove chooses a string at random from the $throw variable: 'rocks' (0), 'paper' (1) or 'scissors' (2)
+// * Using conditional logic, I'll declare the winner based on our understanding of rock beating scissors, scissors beating paper, etc.
 
 
 $throw = ['rock', 'paper', 'scissors']; 
