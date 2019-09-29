@@ -16,19 +16,19 @@ $playerBMove = $throw[rand(0, 2)]; // rock (0) paper (1) or scissors (2)
 // var_dump($playerBMove);
 
 if ($playerAMove == $playerBMove) {
-    // var_dump("it's a tie");
+    $winner = ("it's a tie");
 } elseif ($playerAMove == 'rock' and $playerBMove == 'paper') {
-    // var_dump('Player B wins');
+    $winner = ("Player B");
 } elseif ($playerAMove == 'rock' and $playerBMove == 'scissors') {
-    // var_dump('Player A wins');
+    $winner = ("Player A");
 } elseif ($playerAMove == 'paper' and $playerBMove == 'scissors') {
-    // var_dump('Player B wins');
+    $winner = ("Player B");
 } elseif ($playerAMove == 'paper' and $playerBMove == 'rock') {
-    // var_dump('Player A wins');
+    $winner = ("Player A");
 } elseif ($playerAMove == 'scissors' and $playerBMove == 'paper') {
-    // var_dump('Player A wins');
+    $winner = ("Player A");
 } elseif ($playerAMove == 'scissors' and $playerBMove == 'rock') {
-    // var_dump('Player B wins');
+    $winner = ("Player B");
 }
 
 
