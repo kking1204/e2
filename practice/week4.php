@@ -61,32 +61,38 @@ $coinCounts = [
     'quarters' => 125,
 ];
 
-// var_dump($coinValues);
-// var_dump($coinValues['dimes']);
+/*
+var_dump($coinValues);
+var_dump($coinValues['dimes']);
+*/
 
 // var_dump($coinCounts);
 // asort($coinCounts);
 // var_dump($coinCounts);
 
-// foreach($coinCounts as $key => $value) {
-//     var_dump("For " . $key . " you have: " . $value);
-// };
+/*
+foreach($coinCounts as $key => $value) {
+    var_dump("For " . $key . " you have: " . $value);
+};
+*/
 
 
 
-// foreach($coinCounts as $coin => $count) {
-//     var_dump("For " . $coin . " you have: " . $count);
-// }
+foreach($coinCounts as $coin => $count) {
+    var_dump("For " . $coin . " you have: " . $count);
+}
 
-// $total = 0;
-// foreach($coinCounts as $coin => $count) {
-//     $total = $total + $count * $coinValues[$coin];
-// }
+/*
+$total = 0;
+foreach($coinCounts as $coin => $count) {
+    $total = $total + $count * $coinValues[$coin];
+}
+*/
 
-// $total = 0;
-// foreach($coins as $coin => $info)
-//     $total = $total + ($info['count'] * $info['value']);
-// var_dump($total);
+$total = 0;
+foreach($coins as $coin => $info)
+    $total = $total + ($info['count'] * $info['value']);
+var_dump($total);
 
 // $cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -107,3 +113,40 @@ $coinCounts = [
 // var_dump(4>9); #false
  
 // var_dump(9==9); #true
+
+// for ($i=0; $i<=100; $i++) {
+//     var_dump($i);
+// }
+
+// $guess = null;
+// $answer = 4;
+
+// while ($guess != $answer) {
+//     $guess = rand (0, 10);
+//     var_dump("Guess: " . $guess);
+// }
+
+// $i = 0;
+// $results = [];
+
+// while($i < 10) {
+//     $results[] = $i;
+//     $i++;
+// }
+
+// var_dump($results); 
+
+/*
+$results = [];
+$randomNumbers = [45, 67, 33, 56, 42, 100, 67, 99];
+
+foreach($randomNumbers as $index => $number) {
+
+    if($number % 2 == 0) {
+        break;
+    }
+    $results[] = $number;
+
+}
+var_dump($results); 
+*/
