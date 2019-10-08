@@ -12,4 +12,8 @@ var_dump($computerMove); //proof of concept
 
 if ($userMove == $computerMove) {
     var_dump("it's a tie"); //proof of concept
+    
+    //another way to store and display it 
+    $results = "TIE";
+    var_dump($results);
     } 
