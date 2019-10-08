@@ -7,10 +7,10 @@
 // * Using conditional logic, I'll declare the winner based on our understanding of rock beating scissors, scissors beating paper, etc.
 
 
-$throw = ['rock', 'paper', 'scissors']; 
+$options = ['rock', 'paper', 'scissors']; 
 
-$playerAMove = $throw[rand(0, 2)]; // pick a random string
-$playerBMove = $throw[rand(0, 2)]; // rock (0) paper (1) or scissors (2)
+
+$computer = $options[rand(0, 2)]; // rock (0) paper (1) or scissors (2)
 
 if ($playerAMove == $playerBMove) {
     $winner = ("it's a tie");
