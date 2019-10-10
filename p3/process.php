@@ -4,7 +4,6 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>E2 P2 Design A</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="###.css" />
         <style>
             body {background-color: powderblue; width: 950px; margin: 0 auto; font-family: sans-serif}
         </style>

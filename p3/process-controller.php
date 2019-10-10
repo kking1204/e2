@@ -1,13 +1,20 @@
 <?php
 
-$userMove = ($_GET['throw']); //  create variable for user choice
+// if nothing is chosen, don't let that button submit! 
+if(!isset($_GET['throw'])) {
+	header('Location: index.php');
+}
 
+ // create variable for user choice
+$userMove = ($_GET['throw']);
+
+// create variable for computer choice (random)
 $throwOptions = ['rock', 'paper', 'scissors']; 
 
-// 	create variable for computer choice (random)
-$computerMove = $throwOptions[rand(0, 2)]; // pick a radnom rock (0) paper (1) or scissors (2)
+// pick a radnom rock (0) paper (1) or scissors (2)
+$computerMove = $throwOptions[rand(0, 2)]; 
 
-    
+// my clunky attempt at logic
 if ($userMove == $computerMove) {
     $winner = ("it's a tie");
 } elseif ($userMove == 'rock' and $computerMove == 'paper') {
