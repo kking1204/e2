@@ -11,7 +11,7 @@ $userMove = ($_GET['throw']);
 // create variable for computer choice (random)
 $throwOptions = ['rock', 'paper', 'scissors']; 
 
-// pick a radnom rock (0) paper (1) or scissors (2)
+// pick a random rock (0) paper (1) or scissors (2)
 $computerMove = $throwOptions[rand(0, 2)]; 
 
 // my clunky attempt at logic
