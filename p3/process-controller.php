@@ -18,13 +18,13 @@ $computerMove = $throwOptions[rand(0, 2)];
 if ($userMove == $computerMove) {
     $winner = ("it's a tie");
 } elseif ($userMove == 'rock' and $computerMove == 'paper') {
-    $winner = ("You lose! Paper covers rock");
+    $winner = ("You lose! paper covers rock");
 } elseif ($userMove == 'rock' and $computerMove == 'scissors') {
     $winner = ("You win - rock beats scissors");
 } elseif ($userMove == 'paper' and $computerMove == 'scissors') {
-    $winner = ("You lose! Scissors cut paper!");
+    $winner = ("You lose! scissors cut paper!");
 } elseif ($userMove == 'paper' and $computerMove == 'rock') {
-    $winner = ("You win! Paper covers rock");
+    $winner = ("You win! paper covers rock");
 } elseif ($userMove == 'scissors' and $computerMove == 'paper') {
     $winner = ("You win! scissors cut paper");
 } elseif ($userMove == 'scissors' and $computerMove == 'rock') {
