@@ -3,15 +3,18 @@
 <html lang="en">
 	<head>
 	    <meta charset="utf-8">
-	    <title>E2 P2 Design A</title>
+	    <title>E2 P2 Design A: Results</title>
         <style>
             body {background-color: powderblue; width: 950px; margin: 0 auto; font-family: sans-serif}
         </style>
 	</head>
 	<body>
-		<p> You chose <?php echo($userMove);?>
-		<p> The computah chose <?php echo($computerMove);?>
+		<h1>Results</h1>
+		<p> You chose <strong><?php echo($userMove);?></strong>
+		<p> The computer chose <strong><?php echo($computerMove);?></strong>
+		<br><br>
 		<p> <?php echo($winner);?>
-		<p> <a href="index.php">Play again</a> </p>
+		<br><br>
+		<p><a href="index.php">Play again</a> </p>
 	</body>
 </html>

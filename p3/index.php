@@ -14,6 +14,8 @@
 
     <h1>Let's play Rock Paper Scissors...again</h1>
 
+	<p>Choose one:</p>
+
 	<form method="GET" action="process.php">
 	
 		<input type="radio" value="rock" id="rock" name="throw">

@@ -1,6 +1,6 @@
 <?php
 
-// if nothing is chosen, don't let that button submit! 
+// if nothing is selected, don't let that button Submit! 
 if(!isset($_GET['throw'])) {
 	header('Location: index.php');
 }
