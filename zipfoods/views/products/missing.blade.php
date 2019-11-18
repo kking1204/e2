@@ -7,7 +7,7 @@ Uh oh!
 
 @section('content')
 <div id='product-show'>
-    <h2>Product {{ $product['id'] }} not found</h2>
+    <h2>Product {{ $id }} not found</h2>
     <p class='product-description'>
         Uh-oh, it looks like we can't find what you're looking for.
     </p>

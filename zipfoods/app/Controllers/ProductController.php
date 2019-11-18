@@ -19,6 +19,8 @@ class ProductController extends Controller
             'products' => $this->products->getAll()
             ]);
     }
+    
+    
     public function show()
     {
         $id = $this->app->param('id');
@@ -26,11 +28,11 @@ class ProductController extends Controller
         $product = $this->products->getById($id);
 
         if (is_null($product)) {
-            return $this->app->view('products.missing');
-        } else {
+            return $this->app->view('products.missing', ['id' => $id]);
+        } 
+            
             return $this->app->view('products.show', [
             'product' => $product
-        ]);
-        }
+        ]);       
     }
 }
