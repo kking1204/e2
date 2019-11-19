@@ -13,9 +13,9 @@
     <li>{{ $error }}</li>
     @endforeach
 </ul>
-@elseif($name)
+@elseif($confirmationName)
 <div class="alert alert-success">
-    Thank you for your review, {{ $name }}!
+    Thank you for your review, {{ $confirmationName }}!
 </div>
 @endif
 

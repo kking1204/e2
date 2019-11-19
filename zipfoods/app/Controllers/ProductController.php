@@ -35,11 +35,11 @@ class ProductController extends Controller
             return $this->app->view('products.missing', ['id' => $id]);
         }
             
-        $name = $this->app->old('name');
+        $confirmationName = $this->app->old('confirmationName');
         
         return $this->app->view('products.show', [
             'product' => $product,
-            'name' => $name
+            'confirmationName' => $confirmationName
         ]);
     }
 
@@ -58,7 +58,7 @@ class ProductController extends Controller
         # To do: persist the review to a database
 
         # return them to the product page
-        return $this->app->redirect('/product?id='.$id, ['name' => $name]);
+        return $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
         # alert the user that it was persisted
     }
 }
