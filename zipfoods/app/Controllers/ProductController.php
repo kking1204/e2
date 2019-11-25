@@ -1,8 +1,6 @@
 <?php
 namespace App\Controllers;
 
-use App\Products;
-
 class ProductController extends Controller
 {
     private $products;
@@ -10,13 +8,12 @@ class ProductController extends Controller
     public function __construct($app)
     {
         parent::__construct($app);
-        $this->products = new Products($this->app->path('database/products.json'));
     }
 
     public function index()
     {
         return $this->app->view('products.index', [
-            'products' => $this->products->getAll()
+            'products' => $this->app->db()->all('products')
             ]);
     }
     
@@ -29,16 +26,24 @@ class ProductController extends Controller
             return $this->app->redirect('/products');
         }
         
-        $product = $this->products->getById($id);
+        # Load the product details
+        //$product = $this->products->getById($id);
+        $product = $this->app->db()->findById('products', $id);
+
 
         if (is_null($product)) {
             return $this->app->view('products.missing', ['id' => $id]);
         }
-            
+        
+        # Load the review details
+        $reviews = $this->app->db()->findByColumn('reviews', 'product_id', '=', $id);
+
         $confirmationName = $this->app->old('confirmationName');
         
+        # display stuff on screen
         return $this->app->view('products.show', [
             'product' => $product,
+            'reviews' => $reviews,
             'confirmationName' => $confirmationName
         ]);
     }
@@ -47,17 +52,24 @@ class ProductController extends Controller
     {
         $this->app->validate([
             'name' => 'required',
-            'review' => 'required|minLength:200', # Note how multiple validation rules are separated by a |
+            'content' => 'required|minLength:200', # Note how multiple validation rules are separated by a |
         ]);
         
-
+        # extract data from form submission
         $name = $this->app->input('name');
-        $review = $this->app->input('review');
+        $content = $this->app->input('content');
         $id = $this->app->input('id');
     
-        # To do: persist the review to a database
+        # insert into the database
+        $data = [
+            'name' => $name,
+            'content' => $content,
+            'product_id' => $id,
+        ];
 
-        # return them to the product page
+        $this->app->db()->insert('reviews', $data);
+
+        # return them to the product page with confirmationName used for success messaging
         return $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
         # alert the user that it was persisted
     }
