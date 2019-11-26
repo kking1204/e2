@@ -9,5 +9,5 @@ return [
     '/about' => ['AboutController', 'index'],
     '/practice'=> ['AppController', 'practice'],
     '/practice2'=> ['AppController', 'practice2'],
-    '/products/new'=> ['ProductController', 'newProduct']
+    '/products/new'=> ['AppController', 'newProduct']
 ];

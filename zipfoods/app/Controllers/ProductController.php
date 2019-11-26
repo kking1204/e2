@@ -73,9 +73,4 @@ class ProductController extends Controller
         return $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
         # alert the user that it was persisted
     }
-
-    public function newProduct()
-    {
-        dump('new products get enetered here');
-    }
 }

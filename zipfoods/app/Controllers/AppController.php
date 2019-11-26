@@ -72,4 +72,31 @@ class AppController extends Controller
         
         $this->app->db()->insert('products', $data);
     }
+    public function newProduct()
+    {
+        return $this->app->view('new');
+
+        
+        # extract data from form submission
+        $name = $this->app->input('name');
+        $description = $this->app->input('description');
+        $price = $this->app->input('price');
+        $available = $this->app->input('available');
+        $weight = $this->app->input('weight');
+        $perishable = $this->app->input('perishable');
+    
+        # insert into the database
+        $data = [
+           'name' => $name,
+           'description' => $description,
+           'price' => $price,
+           'available' => $available,
+           'weight' => $weight,
+           'perishable' => $perishable,
+       ];
+
+        $this->app->db()->insert('products', $data);
+        
+        dump("cool");
+    }
 }
