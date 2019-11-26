@@ -81,3 +81,12 @@ Product Show
 #product-review textarea {
     height: 150px;
 }
+
+/*----------------------------------------------------
+Product Reviews
+-----------------------------------------------------*/
+
+span.review-name {
+    font-size: 1.2em;
+    font-weight: bold;
+} 
