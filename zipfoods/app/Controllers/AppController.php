@@ -74,7 +74,7 @@ class AppController extends Controller
     }
     public function newProduct()
     {
-        return $this->app->view('new');
+        // return $this->app->view('new');
 
         
         # extract data from form submission

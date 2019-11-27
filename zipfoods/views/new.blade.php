@@ -1,4 +1,4 @@
-<!-- /views/products/show.blade.php -->
+<!-- /views/products/new.blade.php -->
 @extends('templates.master')
 
 @section('title')
@@ -15,11 +15,41 @@
     <div class='form-group'>
         <label for='name'>Name</label>
         <input type='text' class="form-control" name='name' id='name' value='{{ $app->old("name") }}'>
+        <label for='name'>Description</label>
+        <textarea class="form-control" rows="5" name='description' id='description' value='{{ $app->old("description") }}'></textarea>
+        <label for='name'>Price</label>
+        <input type='ext' class="form-control" name='price' id='price' value='{{ $app->old("price") }}'>
+    <br><br>
+        Available? 
+        <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="availableYes" id="availableYes" value='{{ $app->old("availableYes") }}'>Yes
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="availableNo" id="availableNo" value='{{ $app->old("availableNo") }}'>No
+            </label>
+          </div>
+    <br><br>
+          <div class='form-group'>
+            <label for='name'>Weight</label>
+            <input type='text' class="form-control" name='weight' id='weight' value='{{ $app->old("weight") }}'>
+          </div>
+        
+        Perishable? 
+        <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="perishableYes" id="perishableYes" value='{{ $app->old("perishableYes") }}'>Yes
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="perishableNo" id="perishableNo" value='{{ $app->old("perishableNo") }}'>No
+            </label>
+          </div>
     </div>
-
-
-
-    <button type='submit' class='btn btn-primary'>Submit Review</button>
+    <button type='submit' class='btn btn-primary'>Submit</button>
 </form>
 
 
