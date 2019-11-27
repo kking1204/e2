@@ -23,12 +23,12 @@
         Available? 
         <div class="form-check-inline">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="availableYes" id="availableYes" value='{{ $app->old("availableYes") }}'>Yes
+              <input type="radio" class="form-check-input" name="available" id="available" value='{{ $app->old("available") }}'>Yes
             </label>
           </div>
           <div class="form-check-inline">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="availableNo" id="availableNo" value='{{ $app->old("availableNo") }}'>No
+              <input type="radio" class="form-check-input" name="available" id="available" value='{{ $app->old("available") }}'>No
             </label>
           </div>
     <br><br>
@@ -40,12 +40,12 @@
         Perishable? 
         <div class="form-check-inline">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="perishableYes" id="perishableYes" value='{{ $app->old("perishableYes") }}'>Yes
+              <input type="radio" class="form-check-input" name="perishable" id="perishable" value='{{ $app->old("perishable") }}'>Yes
             </label>
           </div>
           <div class="form-check-inline">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="perishableNo" id="perishableNo" value='{{ $app->old("perishableNo") }}'>No
+              <input type="radio" class="form-check-input" name="perishable" id="perishable" value='{{ $app->old("perishable") }}'>No
             </label>
           </div>
     </div>

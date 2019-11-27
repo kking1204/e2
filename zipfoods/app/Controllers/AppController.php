@@ -74,8 +74,8 @@ class AppController extends Controller
     }
     public function newProduct()
     {
-        // return $this->app->view('new');
-
+        #display the new.blade.php template
+        return $this->app->view('new');
         
         # extract data from form submission
         $name = $this->app->input('name');
