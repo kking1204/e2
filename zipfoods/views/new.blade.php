@@ -9,7 +9,7 @@
 
 <h1>Form</h1>
 
-<form method='POST' id='new-product' action='/products/new'>
+<form method='POST' id='new-product' action='/products/'>
     <h3>Add A New Product</h3>
     <input type='hidden' name='id' value='{{ $product["id"] }}'>
     <div class='form-group'>

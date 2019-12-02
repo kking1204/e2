@@ -74,25 +74,23 @@ class AppController extends Controller
     }
     public function newProduct()
     {
-        #display the new.blade.php template
-        return $this->app->view('new');
-        
+       
         # extract data from form submission
         $name = $this->app->input('name');
         $description = $this->app->input('description');
-        $price = $this->app->input('price');
-        $available = $this->app->input('available');
-        $weight = $this->app->input('weight');
-        $perishable = $this->app->input('perishable');
+        //$price = $this->app->input('price');
+        //$available = $this->app->input('available');
+        //$weight = $this->app->input('weight');
+        //$perishable = $this->app->input('perishable');
     
         # insert into the database
         $data = [
            'name' => $name,
            'description' => $description,
-           'price' => $price,
-           'available' => $available,
-           'weight' => $weight,
-           'perishable' => $perishable,
+           //'price' => $price,
+           //'available' => $available,
+           //'weight' => $weight,
+           //'perishable' => $perishable,
        ];
 
         $this->app->db()->insert('products', $data);

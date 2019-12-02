@@ -73,4 +73,10 @@ class ProductController extends Controller
         return $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
         # alert the user that it was persisted
     }
+
+    public function newProduct()
+    {
+        #display the new.blade.php template
+        return $this->app->view('new');
+    }
 }
