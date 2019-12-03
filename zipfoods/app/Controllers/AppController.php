@@ -74,7 +74,15 @@ class AppController extends Controller
     }
     public function newProduct()
     {
-       
+        $this->app->validate([
+            'name' => 'required',
+            'description' => 'required|minLength:10', # multiple validation rules are separated by a |
+            'price' => 'required|numeric',
+            'available' => 'required|digit',
+            'weight' => 'required|numeric',
+            'perishable' => 'required'
+        ]);
+
         # extract data from form submission
         $name = $this->app->input('name');
         $description = $this->app->input('description');
