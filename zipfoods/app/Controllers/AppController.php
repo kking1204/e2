@@ -79,18 +79,18 @@ class AppController extends Controller
         $name = $this->app->input('name');
         $description = $this->app->input('description');
         $price = $this->app->input('price');
-        //$available = $this->app->input('available');
+        $available = $this->app->input('available');
         $weight = $this->app->input('weight');
-        //$perishable = $this->app->input('perishable');
+        $perishable = $this->app->input('perishable');
     
         # insert into the database
         $data = [
            'name' => $name,
            'description' => $description,
            'price' => $price,
-           //'available' => $available,
+           'available' => $available,
            'weight' => $weight,
-           //'perishable' => $perishable,
+           'perishable' => $perishable,
        ];
 
         $this->app->db()->insert('products', $data);
