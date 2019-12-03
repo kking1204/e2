@@ -103,6 +103,6 @@ class AppController extends Controller
 
         $this->app->db()->insert('products', $data);
         
-        dump("cool");
+        dump("cool, thanks for adding");
     }
 }
