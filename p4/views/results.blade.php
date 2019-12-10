@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-    Individual Result
+All Results
 @endsection
 
 @section('content')

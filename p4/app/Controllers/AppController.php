@@ -27,5 +27,16 @@ class AppController extends Controller
         return $this->app->view("result");
     }
 
-}
+    public function saveNewResult()
+    {       
+        $data = [
+            'name' => $display = $this->app->input('name') //taken from the name field in the form
+        ]; 
+        //dump($data);
+        $this->app->db()->insert('results', $data); //insert the value from the input into the 'results' table 
+
+        return "Process the form and persist the new result to the database...";
+    }
+
+} 
  
