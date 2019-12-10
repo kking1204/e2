@@ -13,9 +13,9 @@ class AppCommand extends Command
     {
         $this->app->db()->createTable('results', [
             'name' => 'varchar(255)',
-            'content' => 'varchar(255)',
+            'content' => 'tinyint',
         ]);
-        dump('Migration complete; check the database for your new table.');
+        dump('Migration complete; check the database for your new tables.');
     }
 
     public function seed()
@@ -30,7 +30,7 @@ class AppCommand extends Command
     # Set up a thing
     $bs = [
         'name' => $faker->name,
-        'content' => $faker->sentences(3, true),
+        'content' => $faker->numberBetween($min = 0, $max = 1) ,
     ];
 
     # Insert the thing

@@ -14,7 +14,12 @@ class AppController extends Controller
 
     public function results()
     {
-        return $this->app->view("results");
+        $results = ($this->app->db()->all('results'));
+     
+        // dump($results);
+     
+        return $this->app->view('results', ['results' => $results]);
+        
     }
 
     public function result()
