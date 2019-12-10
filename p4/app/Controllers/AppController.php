@@ -30,7 +30,8 @@ class AppController extends Controller
     public function saveNewResult()
     {       
         $data = [
-            'name' => $display = $this->app->input('name') //taken from the name field in the form
+            // this first 'name' refers to the column name in the database
+            'name' => $display = $this->app->input('namer') //taken from the name field in the form
         ]; 
         //dump($data);
         $this->app->db()->insert('results', $data); //insert the value from the input into the 'results' table 
