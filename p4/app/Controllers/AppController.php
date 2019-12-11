@@ -8,8 +8,9 @@ class AppController extends Controller
      */
     public function index()
     {
-       
-        return $this->app->view('index');
+       $name = $this->app->old('name', null); //extract the name from the submission
+
+        return $this->app->view('index', ['name' => $name]);
     }
 
     public function results()
@@ -35,6 +36,8 @@ class AppController extends Controller
         ]; 
         //dump($data);
         $this->app->db()->insert('results', $data); //insert the value from the input into the 'results' table 
+
+        $this->app->redirect('/', ['name'=>$data['name']]); //redirect to the index, 
 
         return "Process the form and persist the new result to the database...";
     }
