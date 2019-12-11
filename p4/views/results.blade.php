@@ -6,11 +6,16 @@ All Results
 
 @section('content')
     
+@if($app->old('resultNotFound'))
+    <div class="alert alert-warning">
+        Sorry, there was no result with that ID
+    </div>
+@endif
     <h2>All Results</h2>
 
     <ul>  
     @foreach ($results as $result)  
-        <li>{{$result ['content'] }}</li>
+        <li> <a href='/result?id={{$result ['id']}} '>{{$result ['name'] }} </a></li>
     @endforeach
     </ul>
 @endsection
