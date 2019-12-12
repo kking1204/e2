@@ -12,10 +12,9 @@ class AppCommand extends Command
     public function migrate()
     {
         $this->app->db()->createTable('results', [
-            'name' => 'varchar(255)',
-            'content' => 'tinyint',
+            'content' => 'varchar(10)', // rock or paper or scissors
         ]);
-        dump('Migration complete; check the database for your new tables.');
+        dump('Migration complete! Check the database for your new tables.');
     }
 
     public function seed()
@@ -27,16 +26,15 @@ class AppCommand extends Command
     # Use a loop to create 10 things
     for ($i = 0; $i < 10; $i++) {
 
-    # Set up a thing
+    # Set up a bs thing
     $bs = [
-        'name' => $faker->name,
-        'content' => $faker->numberBetween($min = 0, $max = 1) ,
+        'content' => $faker->randomElement($array = array ('rock','paper','scissors')),
     ];
 
-    # Insert the thing
+    # Insert the bs thing
     $this->app->db()->insert('results', $bs);
 }
-        dump('Seeds complete!');
+        dump('Seeding complete! Check the tables for your fake data.');
     }
 
     public function boom()
