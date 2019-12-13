@@ -3,15 +3,16 @@ body {
 }
 
 header {
-    margin: 20px;
+    margin: 2em;
 }
 
 label {
-    border: 1px solid black;
-    border-radius: 5px;
+    margin: auto;
+    border: 1px solid #1d3234;
+    border-radius: .25em;
     padding: 1.5em;
     cursor: pointer;
-    margin: 10px;
+    margin: .75em;
 }
 
 label:hover {
@@ -23,6 +24,8 @@ label:hover {
     margin: auto;
     margin-top: 1.5em;
     margin-bottom: 2em;
+    padding: .75em;
+    border: 1px solid #1d3234;
     ;
 }
 
