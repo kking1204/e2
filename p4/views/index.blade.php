@@ -32,13 +32,13 @@
         </div>
 	</form>
 
-{{-- //if there's a winner, display the results --}}
-
+{{-- if there's a winner, display the results --}}
+    
 
 {{--  --}}
 
     <div>
-        <a href='/results'>See results &rarr;</a>
+        <a href='/results'>See all results &rarr;</a>
     </div>
     
 @endsection 

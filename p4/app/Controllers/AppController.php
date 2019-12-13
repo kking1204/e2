@@ -43,7 +43,7 @@ class AppController extends Controller
 
         // pick a random rock (0) paper (1) or scissors (2)
         $computerMove = $throwOptions[rand(0, 2)]; 
-        $userMove = $display = $this->app->input('throw');
+        $userMove = $this->app->input('throw');
 
 
         // my clunky attempt at logic
@@ -66,7 +66,7 @@ class AppController extends Controller
 
         $data = [  
             // 'userMove' refers to the column name in the database
-            'userMove' => $display = $this->app->input('throw'), //taken from the name field 'throw' in the form
+            'userMove' => $userMove, //taken from the name field 'throw' in the form
             // 'computerMove' refers to the column name in the database
             'computerMove' => $computerMove,
             'winner' => $winner
@@ -74,9 +74,11 @@ class AppController extends Controller
        
         $this->app->db()->insert('results', $data); //insert into the dB
             
-        $this->app->redirect('/'); //redirect to the index, 
-
+        dump($data);
         
+        //return $this->app->view('index', ['winner' => $winner]); 
+
+        //$this->app->redirect('/', ['winner' => $winner]); //redirect to the index, 
     }
 
 } 
