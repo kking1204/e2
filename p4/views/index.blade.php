@@ -6,13 +6,7 @@
 
 
 
-@if($app->errorsExist())
-<ul class='error alert alert-danger'>
-    @foreach($app->errors() as $error)
-    <li>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
+
 
 @section('content')
     
@@ -24,6 +18,16 @@
             <label for='rock'><input type='radio' name='throw' value='rock' id='rock'> Rock</label>
             <label for='paper'><input type='radio' name='throw' value='paper' id='paper'> Paper</label>
             <label for='scissors'><input type='radio' name='throw' value='scissors' id='scissors'> Scissors</label>
+                  
+    {{-- I want the error message to appear above the submit button --}}
+            @if($app->errorsExist())
+            <ul class='error alert alert-danger'>
+                @foreach($app->errors() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            @endif
+               
             <button type='submit' class='btn btn-info'>--Throw--</button>
         </div>
 	</form>
