@@ -6,9 +6,7 @@ class AppController extends Controller
 
     public function index()
     {
-        $newName = $this->app->old('newName', null); //extract the name from the submission, call it newName to avoid conflicts with partially submitted forms
-
-        return $this->app->view('index', ['newName' => $newName]);
+       return $this->app->view('index');
     }
 
     public function results()
@@ -39,19 +37,17 @@ class AppController extends Controller
     {       
         
         $this->app->validate([
-            'namer' => 'required' //taken from the name FIELD in the form
+            'throw' => 'required'
         ]);
 
         $data = [
-            // this first 'name' refers to the column name in the database
-            'name' => $display = $this->app->input('namer') //taken from the name field in the form
+            // 'userMove' refers to the column name in the database
+            'userMove' => $display = $this->app->input('throw') //taken from the name field 'throw' in the form
         ]; 
-        //dump($data);
-        $this->app->db()->insert('results', $data); //insert the value from the input into the 'results' table 
+       
+        $this->app->db()->insert('results', $data); //insert the value from the 'throw'' into the 'results' table 
 
         $this->app->redirect('/', ['newName'=>$data['name']]); //redirect to the index, 
-
-        return "Process the form and persist the new result to the database...";
     }
 
 } 

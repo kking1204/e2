@@ -12,7 +12,8 @@ class AppCommand extends Command
     public function migrate()
     {
         $this->app->db()->createTable('results', [
-            'content' => 'varchar(10)', // rock or paper or scissors
+            'userMove' => 'varchar(10)', // rock or paper or scissors
+            'computerMove' => 'varchar(10)',
         ]);
         dump('Migration complete! Check the database for your new tables.');
     }
@@ -28,7 +29,7 @@ class AppCommand extends Command
 
     # Set up a bs thing
     $bs = [
-        'content' => $faker->randomElement($array = array ('rock','paper','scissors')),
+        'computerMove' => $faker->randomElement($array = array ('rock','paper','scissors')),
     ];
 
     # Insert the bs thing
