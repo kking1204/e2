@@ -40,14 +40,50 @@ class AppController extends Controller
             'throw' => 'required'
         ]);
 
-        $data = [
+            // create variable for computer choice (random)
+        $throwOptions = ['rock', 'paper', 'scissors']; 
+
+        // pick a random rock (0) paper (1) or scissors (2)
+        $computerMove = $throwOptions[rand(0, 2)]; 
+        $userMove = $display = $this->app->input('throw');
+
+
+        $data = [ //data is both player moves together 
             // 'userMove' refers to the column name in the database
-            'userMove' => $display = $this->app->input('throw') //taken from the name field 'throw' in the form
+            'userMove' => $display = $this->app->input('throw'), //taken from the name field 'throw' in the form
+            'computerMove' => $computerMove
         ]; 
        
         $this->app->db()->insert('results', $data); //insert the value from the 'throw'' into the 'results' table 
 
-        $this->app->redirect('/', ['newName'=>$data['name']]); //redirect to the index, 
+        dump($data);
+        
+        //$this->app->redirect('/'); //redirect to the index, 
+
+        // create variable for computer choice (random)
+        $throwOptions = ['rock', 'paper', 'scissors']; 
+
+        // pick a random rock (0) paper (1) or scissors (2)
+        $computerMove = $throwOptions[rand(0, 2)]; 
+
+        // my clunky attempt at logic
+        if ($userMove == $computerMove) {
+            $winner = ("It's a tie! Play again.");
+        } elseif ($userMove == 'rock' and $computerMove == 'paper') {
+            $winner = ("You lose! paper covers rock!");
+        } elseif ($userMove == 'rock' and $computerMove == 'scissors') {
+            $winner = ("You win - rock beats scissors");
+        } elseif ($userMove == 'paper' and $computerMove == 'scissors') {
+            $winner = ("You lose! scissors cut paper!");
+        } elseif ($userMove == 'paper' and $computerMove == 'rock') {
+            $winner = ("You win! paper covers rock");
+        } elseif ($userMove == 'scissors' and $computerMove == 'paper') {
+            $winner = ("You win! scissors cut paper");
+        } elseif ($userMove == 'scissors' and $computerMove == 'rock') {
+            $winner = ("You win - rock beats scissors");
+        };
+        
+        dump($winner);
     }
 
 } 

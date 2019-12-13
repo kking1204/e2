@@ -6,9 +6,9 @@
 
 @section('content')
     
-    <h2>Your result is {{ $result['content']}} </h2>
+    <p>You chose {{ $result['userMove']}} </p>
 
-    <p>Your name is {{ $result['name']}} </p>
+    <p>Computer chose {{ $result['computerMove']}} </p>
 
     <a href = "/results"> &larr;All results</a>
 
