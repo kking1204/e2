@@ -15,7 +15,7 @@ All Results
 
     <ul>  
     @foreach ($results as $result)  
-        <li> <a href='/result?id={{$result ['id']}} '>{{$result ['userMove'] }} </a></li>
+        <li> <a href='/result?id={{$result ['id']}} '>{{$result ['winner'] }} </a></li>
     @endforeach
     </ul>
 @endsection

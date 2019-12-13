@@ -16,7 +16,7 @@
 
 @section('content')
     
-    <h2>Let's play Rock Paper Scissors...again</h2>
+    <h2>Let's play Rock Paper Scissors...again...again</h2>
 
 	<form method="POST" action="save-new-result">
         <p>Choose one:</p>
@@ -31,7 +31,22 @@
         </div>
 	</form>
 
+{{-- //if there's a winner, display the results --}}
+
+
+{{-- @if('winner')
     
+    <p>You chose {{ $result['userMove']}} </p>
+
+    <p>Computer chose {{ $result['computerMove']}} </p>
+
+    <p>{{ $result['winner']}}</p>
+
+    <a href = "/results"> &larr;All results</a>
+
+    @endif
+    ========== --}}
+
     <div>
         <a href='/results'>See results &rarr;</a>
     </div>

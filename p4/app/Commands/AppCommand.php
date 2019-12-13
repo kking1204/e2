@@ -14,6 +14,7 @@ class AppCommand extends Command
         $this->app->db()->createTable('results', [
             'userMove' => 'varchar(10)', // rock or paper or scissors
             'computerMove' => 'varchar(10)',
+            'winner' => 'varchar(10)',
         ]);
         dump('Migration complete! Check the database for your new tables.');
     }

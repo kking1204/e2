@@ -10,7 +10,7 @@
 
     <p>Computer chose {{ $result['computerMove']}} </p>
 
-    <p>{{ $result['winner']}}  </p>
+    <p>{{ $result['winner']}}</p>
 
     <a href = "/results"> &larr;All results</a>
 

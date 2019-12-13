@@ -12,9 +12,7 @@ class AppController extends Controller
     public function results()
     {
         $results = ($this->app->db()->all('results'));
-     
-        // dump($results);
-     
+         
         return $this->app->view('results', ['results' => $results]);
         
     }
@@ -48,36 +46,37 @@ class AppController extends Controller
         $userMove = $display = $this->app->input('throw');
 
 
-        $data = [ //data is both player moves together 
-            // 'userMove' refers to the column name in the database
-            'userMove' => $display = $this->app->input('throw'), //taken from the name field 'throw' in the form
-            'computerMove' => $computerMove
-        ]; 
-       
-        $this->app->db()->insert('results', $data); //insert the value from the 'throw'' into the 'results' table 
-
-        
-        
-        $this->app->redirect('/'); //redirect to the index, 
-
         // my clunky attempt at logic
         if ($userMove == $computerMove) {
             $winner = ("It's a tie! Play again.");
         } elseif ($userMove == 'rock' and $computerMove == 'paper') {
             $winner = ("You lose! paper covers rock!");
         } elseif ($userMove == 'rock' and $computerMove == 'scissors') {
-            $winner = ("You win - rock beats scissors");
+            $winner = ("You win - rock beats scissors.");
         } elseif ($userMove == 'paper' and $computerMove == 'scissors') {
             $winner = ("You lose! scissors cut paper!");
         } elseif ($userMove == 'paper' and $computerMove == 'rock') {
-            $winner = ("You win! paper covers rock");
+            $winner = ("You win! paper covers rock.");
         } elseif ($userMove == 'scissors' and $computerMove == 'paper') {
-            $winner = ("You win! scissors cut paper");
+            $winner = ("You win! scissors cut paper.");
         } elseif ($userMove == 'scissors' and $computerMove == 'rock') {
-            $winner = ("You win - rock beats scissors");
+            $winner = ("You win - rock beats scissors!");
         };
-        dump($data);
-        dump($winner);
+
+
+        $data = [  
+            // 'userMove' refers to the column name in the database
+            'userMove' => $display = $this->app->input('throw'), //taken from the name field 'throw' in the form
+            // 'computerMove' refers to the column name in the database
+            'computerMove' => $computerMove,
+            'winner' => $winner
+        ]; 
+       
+        $this->app->db()->insert('results', $data); //insert into the dB
+            
+        $this->app->redirect('/'); //redirect to the index, 
+
+        
     }
 
 } 
