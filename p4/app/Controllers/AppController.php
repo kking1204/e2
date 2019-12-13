@@ -56,15 +56,9 @@ class AppController extends Controller
        
         $this->app->db()->insert('results', $data); //insert the value from the 'throw'' into the 'results' table 
 
-        dump($data);
         
-        //$this->app->redirect('/'); //redirect to the index, 
-
-        // create variable for computer choice (random)
-        $throwOptions = ['rock', 'paper', 'scissors']; 
-
-        // pick a random rock (0) paper (1) or scissors (2)
-        $computerMove = $throwOptions[rand(0, 2)]; 
+        
+        $this->app->redirect('/'); //redirect to the index, 
 
         // my clunky attempt at logic
         if ($userMove == $computerMove) {
@@ -82,7 +76,7 @@ class AppController extends Controller
         } elseif ($userMove == 'scissors' and $computerMove == 'rock') {
             $winner = ("You win - rock beats scissors");
         };
-        
+        dump($data);
         dump($winner);
     }
 

@@ -31,7 +31,6 @@
         </div>
 	</form>
 
-
     
     <div>
         <a href='/results'>See results &rarr;</a>
