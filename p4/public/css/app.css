@@ -1,3 +1,31 @@
-#logo {
-    width:300px;
+body {
+    text-align: center;
+}
+
+header {
+    margin: 20px;
+}
+
+label {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1.5em;
+    cursor: pointer;
+    margin: 10px;
+}
+
+label:hover {
+    background-color: rgba(234, 255, 0, 0.591);
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    ;
+}
+
+ul {
+    list-style-type: none;
 }
