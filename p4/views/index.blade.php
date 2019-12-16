@@ -11,7 +11,7 @@
 @section('content')
     
     <h2>Let's play Rock Paper Scissors...again...again</h2>
-<img src="http://people.dce.harvard.edu/~kking/images/rps.png">
+        <img src="http://people.dce.harvard.edu/~kking/images/rps.png">
 	<form method="POST" action="save-new-result">
         <p>Choose one:</p>
         <div class="radio-group">
@@ -32,10 +32,10 @@
         </div>
 	</form>
 
-{{-- if there's a winner, display the results --}}
-    
-
-{{--  --}}
+        {{-- you chose app old $userMove --}}
+        {{-- computer chose app old $computerMove --}}
+        {{-- $winner --}}
+        {{--  --}}
 
     <div>
         <a href='/results'>See all results &rarr;</a>
