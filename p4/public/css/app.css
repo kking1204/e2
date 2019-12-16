@@ -1,9 +1,14 @@
 body {
     text-align: center;
+    background-color: #F7F7F7;
 }
 
 header {
     margin: 2em;
+}
+
+h1 a {
+    color: #0E689B;
 }
 
 label {
@@ -19,13 +24,17 @@ label:hover {
     background-color: rgba(234, 255, 0, 0.591);
 }
 
+img {
+    max-width: 55%;
+}
+
 .btn {
     display: block;
     margin: auto;
     margin-top: 1.5em;
     margin-bottom: 2em;
     padding: .75em;
-    border: 1px solid #1d3234;
+    background-color: #0E689B;
     ;
 }
 
