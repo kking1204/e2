@@ -75,10 +75,11 @@ class AppController extends Controller
         $this->app->db()->insert('results', $data); //insert into the dB
             
         dump($data);
-        
-        //return $this->app->view('index', ['winner' => $winner]); 
-
-        //$this->app->redirect('/', ['winner' => $winner]); //redirect to the index, 
+       
+        # display stuff on screen
+        return $this->app->view('index', [
+            $data
+        ]);
     }
 
 } 
