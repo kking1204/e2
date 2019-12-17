@@ -11,7 +11,7 @@
 @section('content')
     
     <h2>Let's play Rock Paper Scissors...again...again</h2>
-        <img src="http://people.dce.harvard.edu/~kking/images/rps.png">
+        <img src="http://people.dce.harvard.edu/~kking/images/rps.png" alt="happy rock, happy paper, happy scissors cartoon">
 	<form method="POST" action="save-new-result">
         <p>Choose one:</p>
         <div class="radio-group">
